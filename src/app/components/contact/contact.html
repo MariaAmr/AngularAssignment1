@@ -1,0 +1,60 @@
+<section class="contact py-5 globalHeight">
+  <div class="container">
+    <div class="text-center section-header mb-5">
+      <h2 class="text-uppercase fs-1 fw-bolder">contact section</h2>
+      <div class="decorate-line d-flex justify-content-center align-items-center gap-3 mb-3">
+        <span class="line"></span>
+        <span class="star fa fa-star"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    
+    <form action="#" class="w-50 px-1 py-4 mx-auto">
+      <!-- User Name Field -->
+      <div class="form-group position-relative mb-5">
+        <input type="text" id="userName" class="form-control" 
+               [(ngModel)]="formData.userName" name="userName"
+               (focus)="userNameFocused = true"
+               (blur)="userNameFocused = formData.userName !== ''">
+        <label for="userName" [class.float-up]="userNameFocused || formData.userName">
+          userName
+        </label>
+      </div>
+
+      <!-- User Age Field -->
+      <div class="form-group position-relative mb-5">
+        <input type="text" id="userAge" class="form-control"
+               [(ngModel)]="formData.userAge" name="userAge"
+               (focus)="userAgeFocused = true"
+               (blur)="userAgeFocused = formData.userAge !== ''">
+        <label for="userAge" [class.float-up]="userAgeFocused || formData.userAge">
+          userAge
+        </label>
+      </div>
+
+      <!-- User Email Field -->
+      <div class="form-group position-relative mb-5">
+        <input type="email" id="userEmail" class="form-control"
+               [(ngModel)]="formData.userEmail" name="userEmail"
+               (focus)="userEmailFocused = true"
+               (blur)="userEmailFocused = formData.userEmail !== ''">
+        <label for="userEmail" [class.float-up]="userEmailFocused || formData.userEmail">
+          userEmail
+        </label>
+      </div>
+
+      <!-- User Password Field -->
+      <div class="form-group position-relative">
+        <input type="password" id="userPass" class="form-control"
+               [(ngModel)]="formData.userPassword" name="userPassword"
+               (focus)="userPasswordFocused = true"
+               (blur)="userPasswordFocused = formData.userPassword !== ''">
+        <label for="userPass" [class.float-up]="userPasswordFocused || formData.userPassword">
+          userPassword
+        </label>
+      </div>
+
+      <button class="btn btn-style border rounded-2 mt-4">Send Message</button>
+    </form>
+  </div>
+</section>

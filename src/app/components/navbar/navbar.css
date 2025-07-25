@@ -1,0 +1,10 @@
+
+nav.navbar {
+  transition: padding 0.6s ease;  
+}
+nav.scrolled-nav {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+

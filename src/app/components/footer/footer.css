@@ -1,0 +1,8 @@
+@media (max-width: 768px) { 
+    footer .footerOne{
+        margin-bottom: 48px;
+    }
+    footer .footerTwo{
+        margin-bottom: 48px;
+    }
+ }

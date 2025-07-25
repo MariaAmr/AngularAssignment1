@@ -1,0 +1,6 @@
+<div class="modal-overlay" [class.show]="isOpen" (click)="onOverlayClick($event)">
+  <div class="modal-content" >
+    <button class="close-btn" (click)="closeModal()">×</button>
+    <img [src]="imageSrc" alt="Expanded view" class="modal-image">
+  </div>
+</div>

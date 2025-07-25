@@ -1,0 +1,72 @@
+<!-- portfolio.component.html -->
+<section class="portfolio py-5 globalHeight">
+    <div class="container">
+        <div class="text-center section-header">
+            <h2 class="text-uppercase fs-1 fw-bolder">portfolio component</h2>
+            <div class="decorate-line d-flex justify-content-center align-items-center gap-3 mb-3">
+                <span class="line"></span>
+                <span class="star fa fa-star"></span>
+                <span class="line"></span>
+            </div>
+        </div>
+    </div>
+   <div class="container mt-3">
+        <div class="row g-5 px-5 text-white">
+          <!-- Card 1 -->
+          <div class="col-lg-4 col-md-6">
+            <app-card 
+              [imageSrc]="image1.src"
+              [altText]="image1.alt"
+              (imageClicked)="openModal(image1.src)">
+            </app-card>
+          </div>
+          
+          <!-- Card 2 -->
+          <div class="col-lg-4 col-md-6">
+            <app-card 
+              [imageSrc]="image2.src"
+              [altText]="image2.alt"
+              (imageClicked)="openModal(image2.src)">
+            </app-card>
+          </div>
+          
+          <!-- Card 3 -->
+          <div class="col-lg-4 col-md-6">
+            <app-card 
+              [imageSrc]="image3.src"
+              [altText]="image3.alt"
+              (imageClicked)="openModal(image3.src)">
+            </app-card>
+          </div>
+          
+          <!-- Card 4 -->
+          <div class="col-lg-4 col-md-6">
+            <app-card 
+              [imageSrc]="image4.src"
+              [altText]="image4.alt"
+              (imageClicked)="openModal(image4.src)">
+            </app-card>
+          </div>
+          
+          <!-- Card 5 -->
+          <div class="col-lg-4 col-md-6">
+            <app-card 
+              [imageSrc]="image5.src"
+              [altText]="image5.alt"
+              (imageClicked)="openModal(image5.src)">
+            </app-card>
+          </div>
+          
+          <!-- Card 6 -->
+          <div class="col-lg-4 col-md-6">
+            <app-card 
+              [imageSrc]="image6.src"
+              [altText]="image6.alt"
+              (imageClicked)="openModal(image6.src)">
+            </app-card>
+          </div>
+        </div>
+      </div>
+      
+      <app-image-model #imageModal></app-image-model>
+</section>

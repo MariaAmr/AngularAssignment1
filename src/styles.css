@@ -1,1 +1,184 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --whiteColor: #FFF;
+    --secondColor: #2c3e50;
+    --primaryColor: #1abc9c;
+    --footerColor: #1A252F;
+    --bs-nav-link-padding-x: 1.5rem;
+    
+}
+
+/* Smooth resizing behavior */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+ 
+}
+body{
+  display: flex;
+  flex-direction: column;
+}
+body.modal-open {
+  overflow: hidden;
+}
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden; /* Prevent any internal overflow */
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+a {
+    text-transform: inherit;
+    color: inherit;
+}
+p{
+    margin-bottom: 0;
+}
+.globalHeight{
+   margin-top: 72px;
+   min-height: calc(100vh - 80px); 
+}
+/* Common section */
+section{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.line{
+    width: 90px;
+    height: 4px;
+    display: inline-block;
+    background-color: var(--whiteColor);
+}
+.home,.about,.overlay{
+    background-color: var(--primaryColor);
+}
+.section-header{
+    color: var(--secondColor);
+}
+.section-header .line{
+    background-color: var(--secondColor);
+}
+/* End Common Section */
+nav,.upper-footer {
+    background-color: var(--secondColor);
+}
+.upper-footer {
+    padding: 40px 0;
+}
+.navbar-expand-lg .navbar-nav .nav-link{
+    --bs-navbar-nav-link-padding-x: .8rem;
+  
+}
+.navbar a{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.navbar-brand{
+    font-size: 32px;
+}
+.navbar-brand, .navbar-nav .nav-link{
+    font-weight: 700;
+}
+.navbar-brand,.navbar-brand:focus, .navbar-brand:hover,.navbar-nav .nav-link,
+.navbar-nav .nav-link.show,.nav-link:focus,.active {
+    color: var(--whiteColor);
+    transition: all 0.3s ease;
+}
+.nav-link:focus,.active{
+    border-radius: 10px;
+}
+.active-link {
+  color: #1abc9c !important; /* Your active color */
+  font-weight: bold;
+  position: relative;
+  transition: all 0.3s ease;
+  transform: translateY(-2px);
+}
+.active-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #1abc9c;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+
+}
+.active-link::after {
+  transform: scaleX(1);
+}
+
+/* Nav link base styles */
+.nav-link {
+ 
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  padding: 0.5rem 0;
+}
+
+/* Underline animation */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #1abc9c;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* Active state - underline fully visible */
+.active-link::after {
+  transform: scaleX(1);
+}
+
+/* Click animation */
+.nav-link.clicked::after {
+  animation: swipe 0.6s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+@keyframes swipe {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+.navbar-collapse {
+    margin-block: 18px;
+    flex-grow: 0;
+}
+footer li{
+    width: 37px;
+    height: 37px;
+}
+.copyright {
+    background-color: var(--footerColor);
+    padding: 10px;
+}
