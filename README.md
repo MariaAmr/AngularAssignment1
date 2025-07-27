@@ -23,7 +23,7 @@
    + Fixed modal closing when clicking outside image by clicking <span style="color:orange;"> `Esc` , `close button => x` , ` click by mouse out the image` </span>
    + Resolved image loading issues
    + Corrected aspect ratio problems
-      - the reason of overflow was in `closebtn{ right: -150px  top: -110px }`
+      - the reason of overflow was in `closebtn{ right: -150px  top: -110px }` and row wasn't in a container in footer
 
 #### **Contact Form**
 - **Floating Labels**: Animated form labels
